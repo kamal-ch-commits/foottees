@@ -1,52 +1,44 @@
-Foottees est un mini projet e-commerce réalisé en **PHP** et **MySQL** (XAMPP).  
-Le site contient une boutique, un panier/checkout, et une partie administration.
+# Foottees — Boutique de maillots de football
 
-Fonctionnalités
-- Affichage des produits (catalogue / accueil)
-- Panier (`cart.php`)
-- Paiement / commande (`checkout.php`)
-- Authentification (`login.php`, `logout.php`)
-- Tableau de bord admin (`dashboard.php`)
-- Configuration MySQL (`config.php`)
-- Script d’installation BD (`setup_mysql.php`)
-- Dossier des ressources : `assets/`
+**PHP · MySQL · HTML/CSS · XAMPP**
 
-Technologies
-- PHP
-- MySQL
-- HTML/CSS (+ éventuellement JS)
-- XAMPP (Apache + MySQL)
+Projet e-commerce avec catalogue de maillots, panier, enregistrement des commandes et espace d'administration. Les prix sont exprimés en dirhams marocains (MAD).
 
-- Structure du projet 
-- `index.php` — accueil / catalogue
-- `cart.php` — panier
-- `checkout.php` — checkout / commande
-- `login.php` / `logout.php` — connexion / déconnexion
-- `dashboard.php` — administration
-- `config.php` — connexion/config base de données
-- `setup_mysql.php` — création/initialisation base de données
-- `assets/` — images et fichiers statiques
+## Fonctionnalités
 
-  Installation (XAMPP)
-1. Installer et ouvrir **XAMPP**
-2. Démarrer :
-   - **Apache**
-   - **MySQL**
-3. Placer le dossier du projet dans :
-   - `C:\xampp\htdocs\foottees`
-4. Créer la base de données :
-   - Ouvrir `http://localhost/phpmyadmin`
-   - Créer une BD (exemple : `foottees`)
-5. Configurer les accès BD dans `config.php` (host, dbname, user, password)
-6. Lancer l’installation (si votre projet l’utilise) :
-   - `http://localhost/foottees/setup_mysql.php`
+- Consulter les produits et leurs tailles.
+- Ajouter des articles au panier et passer une commande.
+- Se connecter à l'espace d'administration.
+- Initialiser la base avec des produits de démonstration.
 
-Lancer le projet
-Ouvrir dans le navigateur :
-- `http://localhost/foottees/`
+## Structure
 
- Utilisation
-- Parcourir les produits depuis l’accueil
-- Ajouter au panier
-- Passer à la commande
-- Se connecter pour accéder au dashboard admin
+| Chemin | Rôle |
+|---|---|
+| `index.php` | Accueil et catalogue |
+| `cart.php` | Panier |
+| `checkout.php` | Enregistrement de commande |
+| `login.php` / `logout.php` | Connexion et déconnexion |
+| `admin/dashboard.php` | Administration |
+| `config.php` | Connexion MySQL |
+| `setup_mysql.php` | Création des tables et données de démonstration |
+| `assets/` | Ressources visuelles |
+
+## Installation locale avec XAMPP
+
+1. Installer XAMPP et démarrer Apache et MySQL.
+2. Placer le projet dans `C:\xampp\htdocs\foottees`.
+3. Créer une base MySQL depuis phpMyAdmin.
+4. Adapter les paramètres de connexion dans `config.php` à cette base.
+5. Ouvrir http://localhost/foottees/setup_mysql.php pour créer les tables et les données de démonstration.
+6. Ouvrir http://localhost/foottees/ pour accéder à la boutique.
+
+## Démonstration locale
+
+Parcourir le catalogue, ajouter un article au panier et enregistrer une commande avec des coordonnées fictives. Explorer ensuite l'administration depuis la page de connexion.
+
+Le script d'installation crée le compte local `admin@foottees.ma` avec le mot de passe `admin123`. Remplacer ces identifiants et retirer l'accès public au script d'installation avant une mise en ligne.
+
+## Périmètre
+
+Ce dépôt présente un projet pédagogique PHP/MySQL. L'enregistrement d'une commande ne constitue pas une intégration de paiement bancaire en ligne.
